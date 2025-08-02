@@ -1,0 +1,11 @@
+{
+  "name": "3.filehandling",
+  "version": "1.0.0",
+  "description": "FileHandling",
+  "main": "fileops.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akarsh Jha",
+  "license": "ISC"
+}
