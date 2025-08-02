@@ -1,0 +1,11 @@
+{
+  "name": "1.helloworld",
+  "version": "1.0.0",
+  "description": "Scripts of our own",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akarsh Jha",
+  "license": "ISC"
+}
