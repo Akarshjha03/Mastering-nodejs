@@ -1,0 +1,45 @@
+GET
+Purpose: Retrieve data from the server.
+Safe: Yes | Idempotent: Yes | Changes Data: No
+Details: Parameters usually in URL (query string), visible to the user, can be cached, avoid sensitive data in URL.
+Example: GET /users?id=123
+Use Case: Fetching user details, product lists.
+
+POST
+Purpose: Create a new resource on the server.
+Safe: No | Idempotent: No | Changes Data: Yes
+Details: Data sent in request body (JSON, form-data, etc.), commonly used for forms, uploads, and submissions.
+Example: POST /users
+Body: { "name": "Akarsh", "role": "Backend Engineer" }
+Use Case: Creating accounts, uploading files.
+
+PUT
+Purpose: Replace an entire resource.
+Safe: No | Idempotent: Yes | Changes Data: Yes
+Details: Requires full object in request body, can create resource if not existing (depending on API).
+Example: PUT /users/123
+Body: { "name": "Akarsh Jha", "role": "Full Stack Engineer" }
+Use Case: Full profile update.
+
+PATCH
+Purpose: Update part of an existing resource.
+Safe: No | Idempotent: Sometimes | Changes Data: Yes
+Details: Sends only fields to update, smaller payload than PUT.
+Example: PATCH /users/123
+Body: { "role": "Android Engineer" }
+Use Case: Partial updates (e.g., change role only).
+
+DELETE
+Purpose: Remove a resource.
+Safe: No | Idempotent: Yes | Changes Data: Yes
+Details: Usually no body, deleting a non-existent resource still returns success or safe error.
+Example: DELETE /users/123
+Use Case: Delete accounts, remove products.
+
+Quick Summary:
+GET → Read
+POST → Create
+PUT → Replace
+PATCH → Modify partially
+DELETE → Remove
+
