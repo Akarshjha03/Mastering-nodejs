@@ -1,0 +1,72 @@
+📌 Semantic Versioning (SemVer) – MAJOR.MINOR.PATCH
+
+A version number is written as:
+
+vMAJOR.MINOR.PATCH
+
+
+1. MAJOR (X.0.0)
+
+When to increment:
+Backward incompatible changes are introduced.
+Public API changes that break existing functionality.
+Significant architectural changes
+Example: v1.0.0 → v2.0.0
+Impact: Users must update their code to work with the new version.
+GitHub Best Practice:
+Create a release branch or tag for major updates.
+Update the CHANGELOG.md clearly marking "BREAKING CHANGES".
+Provide a migration guide in docs/ folder.
+
+
+2. MINOR (0.X.0)
+
+When to increment:
+Backward compatible new features are added.
+Enhancements that do not break existing APIs.
+Deprecations (but still keeping old APIs working).
+Example: v1.2.0 → v1.3.0
+Impact: Users can upgrade without changing their code, but they get extra features.
+GitHub Best Practice:
+Update the documentation with the new feature usage.
+Create a release note in GitHub Releases mentioning new features.
+
+3. PATCH (0.0.X)
+
+When to increment:
+Backward compatible bug fixes.
+Security patches.
+Performance improvements without changing APIs.
+Example: v1.2.3 → v1.2.4
+Impact: Safe to update without modifying code.
+GitHub Best Practice:
+Keep patch releases small and targeted.
+Close GitHub issues referencing the bug fix.
+
+🔄 Dependency Versioning in package.json (Node.js example)
+
+In package.json, dependencies are often defined like:
+
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+
+Caret (^): Updates to the latest minor or patch (e.g., ^1.2.3 → 1.x.x but not 2.x.x).
+
+Tilde (~): Updates only to the latest patch within the same minor version.
+
+Exact version: Locks to a specific version (e.g., "1.2.3").
+
+📖 References & Documentation
+
+Official SemVer Specification: https://semver.org/
+npm Versioning Docs: https://docs.npmjs.com/about-semantic-versioning
+GitHub Releases Documentation: https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases
+
+
+
+
+
