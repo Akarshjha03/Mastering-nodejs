@@ -6,8 +6,14 @@ This project demonstrates a simple HTTP server built using Node.js. The server s
 
 URL Routing is the technique of handling different URLs (routes) in a web server and responding appropriately based on the path requested by the client.
 
+use the following command to install url dependency
+```bash
+npm i url
+```
+
+
 For example:
-- `/` → Homepage
+- `/` → Path (Here works as Homepage)
 - `/about` → About page
 - `/contact?name=akarsh` → Contact page with query parameter
 

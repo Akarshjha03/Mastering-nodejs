@@ -7,43 +7,41 @@ const url = require('url');   // To parse the URL and its query parameters
 const myServer = http.createServer((req, res) => {
 
     // Ignore browser's automatic request for /favicon.ico
-    if (req.url === "/favicon.ico") return res.end(); // Prevents logging unnecessary requests
-
-    // Create a log message with a timestamp and the requested URL
-    const log = `${Date.now()}: ${req.url} New Req Received\n`;
+    if (req.url === "/favicon.ico") return res.end();
 
     // Parse the incoming URL to access path and query parameters
     const myUrl = url.parse(req.url, true);
-    console.log(myUrl); // Log the parsed URL object for debugging and learning
 
-    // Append the log message to a file named 'log.txt'
-    fs.appendFile("log.txt", log, (err, data) => {
+    // Create a log message with method, timestamp, and requested URL
+    const log = `${new Date().toISOString()} [${req.method}] ${myUrl.pathname} New Req Received\n`;
+
+    // Append the log message to 'log.txt'
+    fs.appendFile("log.txt", log, (err) => {
         if (err) {
-            // If there's an error writing to the file, log it and send a 500 response
             console.error('Failed to write log:', err);
             res.statusCode = 500;
             res.end('Internal Server Error');
             return;
         }
 
-        // Handle routing based on the URL path
-        switch (req.url) {
+        // Routing based on the path
+        switch (myUrl.pathname) {
             case "/":
-                res.end("HomePage"); // Respond to the root route
+                res.end("HomePage");
                 break;
 
             case "/about":
-                res.end("I am Akarsh Jha, Backend and Android Engineer"); // Respond to /about route
+                res.end("I am Akarsh Jha, Backend and Android Engineer");
                 break;
 
             default:
-                res.end("404 Not Found"); // Handle undefined routes
+                res.end("404 Not Found");
                 break;
         }
     });
 });
 
-// Start the server and listen on port 8000
+// Start the server
 myServer.listen(8000, () => {
     console.log('Server is running on port 8000');
 });
