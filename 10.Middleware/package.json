@@ -1,0 +1,16 @@
+{
+  "name": "10.middleware",
+  "version": "1.0.0",
+  "description": "Focus will be on Middleware",
+  "license": "ISC",
+  "author": "Akarsh Jha",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
