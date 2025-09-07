@@ -1,13 +1,16 @@
 REST API - JSON 
 
-Hybrid server:
+Hybrid server: (DONE)
 GET /users - List of all users (html render - SSR - can be used by web)
 GET /api/users - List of all users (json - can be used by mobileapps, watch, alexa..etx - CSR)
 
-Dynamic path parameter:
+Dynamic path parameter: (DONE)
 sample path - GET /api/users/:id (abhi yeh id kuch bhi ho sakti hai)
 GET /users/1 - Get the user with id 1
 GET /users/2 - Get the user with id 2
+
+
+---WILL BE DONE IN POSTMAN FOLDERS---
 
 POST /users - Create new users
 

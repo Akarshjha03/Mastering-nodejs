@@ -1,7 +1,7 @@
 {
   "name": "7.express",
   "version": "1.0.0",
-  "description": "",
+  "description": "This folder is about Express.js(framework), which makes our task easier for creating a web server.",
   "license": "ISC",
   "author": "Akarsh Jha",
   "type": "commonjs",

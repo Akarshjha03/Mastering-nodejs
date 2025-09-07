@@ -47,19 +47,19 @@ app.get("/api/users/:id", (req, res) => {
 //TASK 3
 app.put("/api/users/:id", (req, res) => {
     // TODO: Create a user with id
-    return res.json({ status: "pending - to be done in middleware folder" })
+    return res.json({ status: "pending - to be done in postman folder" })
 })
 
 //TASK 4
 app.patch("/api/users/:id", (req, res) => {
     // TODO: Edit the user with id
-    return res.json({ status: "pending - to be done in middleware folder" })
+    return res.json({ status: "pending - to be done in postman folder" })
 })
 
 //TASK 5
 app.delete("/api/users/:id", (req, res) => {
     // TODO: Delete the user with id
-    return res.json({ status: "pending - to be done in middleware folder" })
+    return res.json({ status: "pending - to be done in postman folder" })
 })
 
 /*------------------------------  OR  --------------------------------
