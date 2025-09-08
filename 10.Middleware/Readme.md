@@ -1,5 +1,12 @@
 # Middlewares
 
+### Install Nodemon
+This continiously checks code for any changes, and restarts the server with updated code automatically
+
+npm install nodemon
+
+script { start : nodemon index.js }
+
 ### 🛑 First, What is Middleware?
 
 Think of middleware as a checkpoint between the client request and the final response.

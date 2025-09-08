@@ -25,8 +25,23 @@ userRouter.use((req, res, next) => {
 
 // GET - Return all users
 userRouter.get("/", (req, res) => {
+  res.setHeader("X-Name-of-User", "Akarsh Jha"); // Custom header - always add X- before custom header names
+  console.log(req.headers); // Log all request headers
   return res.json(users);
 });
+
+// GET - Find user by ID
+app.get("/api/users/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const user = users.find((user) => user.id === id);
+
+  if (!user) {
+    return res.status(404).json({ error: "User not found" });
+  }
+
+  return res.json(user);
+});
+
 
 // Mount router
 app.use("/api/users", userRouter);
