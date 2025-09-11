@@ -7,7 +7,7 @@ const users = require("./MOCK_DATA.json"); // Load mock user data
 const app = express();
 const port = 3000; // Server port
 
-// Middleware to parse form data
+// Middleware to parse form data - Inbuilt in Express
 app.use(express.urlencoded({ extended: false }));
 
 // ------------------------- Routes -------------------------
