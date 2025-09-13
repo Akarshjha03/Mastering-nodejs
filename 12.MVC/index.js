@@ -1,3 +1,5 @@
+// Entry Point of the Application - Everything Connects here
+
 const express = require("express");
 const connectDB = require("./config/db"); // ✅ Correct relative path
 

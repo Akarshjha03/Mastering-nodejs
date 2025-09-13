@@ -1,3 +1,5 @@
+//All user routes here
+
 const express = require("express");
 const router = express.Router();
 const { createUser, getUsers, getUserById } = require("../controllers/userController");

@@ -1,3 +1,5 @@
+//All user logic CRUD functions here
+
 const User = require("../models/User");
 
 // 👉 Create new user
