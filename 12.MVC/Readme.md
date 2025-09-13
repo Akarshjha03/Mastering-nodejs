@@ -3,6 +3,8 @@
 
 A simple RESTful API for user management built using the **Model-View-Controller (MVC)** architecture in Node.js and Express. This project demonstrates clean separation of concerns and scalable structure for backend applications.
 
+![MVC Diagram](https://github.com/Akarshjha03/Mastering-nodejs/raw/main/12.MVC/MVC.png)
+
 ---
 
 ## 📁 Project Structure
