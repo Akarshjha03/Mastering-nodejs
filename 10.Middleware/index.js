@@ -36,7 +36,7 @@ app.get("/api/users/:id", (req, res) => {
   const user = users.find((user) => user.id === id);
 
   if (!user) {
-    return res.status(404).json({ error: "User not found" });
+    return res.status(404).json({ error: "User not found" }); //Status Code 404 - Not Found
   }
 
   return res.json(user);

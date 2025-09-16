@@ -1,7 +1,7 @@
 const express = require('express');   // Import Express framework
 const mongoose = require('mongoose'); // Import Mongoose for MongoDB connection & schema modeling
 
-const app = express();
+const app = express(); //Express Instance
 const port = 8000;
 
 // ------------------- MIDDLEWARE -------------------
